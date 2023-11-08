@@ -1,4 +1,4 @@
-# API Collection
+# API Collections
 repository to save the API that i have created using python.
 
 ## installation
@@ -23,19 +23,19 @@ pip install -r requirements.txt
 ## collections
 
 ### API parsing data NIK
-- enpoints
+- endpoints
 ```shell
-/api/cek-nik?nik<nik>
+/api/cek-nik?nik=<nik>
 ```
 
 ### API pencarian provinsi
-- enpoints
+- endpoints
 ```shell
 /api/provinsi?search=<query>
 ```
 
 ### API pencarian kecamatan
-- enpoints
+- endpoints
 ```shell
 /api/kecamatan?search=<query>
 ```
