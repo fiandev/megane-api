@@ -1,5 +1,5 @@
 {
-"buildCommand":"pip install -r requirements.txt && python app.py",
+"buildCommand":"pip install -r requirements.txt",
   "builds": [
     {
       "src": "./app.py",
@@ -13,7 +13,7 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "app.py"
+      "dest": "./app.py"
     }
   ]
 }
