@@ -10,9 +10,14 @@ def api_response_error (message, code = 500):
       "message": message,
     })
 
-def api_response_success (data, status = "success", code = 200):
-    return response_json({
+def api_response_success (data, status = "success", code = 200, otherStateData = {}):
+    responseTemplate = {
       "code": code,
       "status": status,
       "data": data,
-    })
+    }
+    
+    for key in otherStateData:
+        responseTemplate[key] = otherStateData[key]
+    
+    return response_json(responseTemplate)

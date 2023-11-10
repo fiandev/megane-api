@@ -22,6 +22,13 @@ pip install -r requirements.txt
 
 ## collections
 
+### API meme from ![lahelu](https://lahelu.com)
+
+- endpoints
+```shell
+/api/lahelu/all
+```
+
 ### API parsing data NIK
 - endpoints
 ```shell

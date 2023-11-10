@@ -21,7 +21,6 @@ class RegionOfIndonesiaController:
             
             return api_response_success(results)
         except Exception as err:
-            raise err
             return api_response_error(f"kecamatan { query } tidak ditemukan !")
             
     def search_province ():
@@ -40,5 +39,4 @@ class RegionOfIndonesiaController:
             
             return api_response_success(results)
         except Exception as err:
-            raise err
             return api_response_error(f"provinsi { query } tidak ditemukan !")

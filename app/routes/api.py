@@ -2,6 +2,8 @@ from flask import jsonify
 from app.core.server import server
 from app.controllers.api.PopulationDataController import PopulationDataController
 from app.controllers.api.RegionOfIndonesiaController import RegionOfIndonesiaController
+from app.controllers.api.PhoneNumberController import PhoneNumberController
+from app.controllers.api.LaheluController import LaheluController
 
 @server.route('/api/test')
 def Test ():
@@ -25,3 +27,26 @@ def search_district():
 def search_province():
     return RegionOfIndonesiaController.search_province()
 
+@server.route('/api/check-number')
+def check_number ():
+    return PhoneNumberController.check_number()
+
+@server.route('/api/generator/phone-number/')
+def phone_number ():
+    return PhoneNumberController.generator()
+
+@server.route('/api/generator/phone-number/provider/<provider_slug>')
+def phone_number_specific_provider ():
+    pass
+
+@server.route('/api/generator/phone-number/providers')
+def phone_number_providers ():
+    pass
+
+@server.route("/api/lahelu/all")
+def lahelu_all ():
+    return LaheluController.all_memes()
+
+@server.route("/api/lahelu/downloader")
+def lahelu_downloader ():
+    return LaheluController.downloader()
