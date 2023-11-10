@@ -1,8 +1,7 @@
 {
-  "buildCommand": "pip install -r requirements.txt && flask run",
   "builds": [
     {
-      "src": "main.py",
+      "src": "./app.py",
       "use": "@vercel/python"
     },
     {
@@ -13,7 +12,7 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "app.py"
+      "dest": "/"
     }
   ]
 }
