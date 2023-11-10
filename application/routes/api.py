@@ -1,9 +1,9 @@
 from flask import jsonify
-from app.core.server import server
-from app.controllers.api.PopulationDataController import PopulationDataController
-from app.controllers.api.RegionOfIndonesiaController import RegionOfIndonesiaController
-from app.controllers.api.PhoneNumberController import PhoneNumberController
-from app.controllers.api.LaheluController import LaheluController
+from application.core.server import server
+from application.controllers.api.PopulationDataController import PopulationDataController
+from application.controllers.api.RegionOfIndonesiaController import RegionOfIndonesiaController
+from application.controllers.api.PhoneNumberController import PhoneNumberController
+from application.controllers.api.LaheluController import LaheluController
 
 @server.route('/api/test')
 def Test ():

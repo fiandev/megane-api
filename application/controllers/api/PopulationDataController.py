@@ -1,7 +1,7 @@
 import re
 from flask import request
-from app.utilities.response import api_response_error, api_response_success
-from app.utilities.kk import parse_district, parse_subdistrict, parse_birthdate, parse_province
+from application.utilities.response import api_response_error, api_response_success
+from application.utilities.kk import parse_district, parse_subdistrict, parse_birthdate, parse_province
 
 class PopulationDataController:
     @staticmethod

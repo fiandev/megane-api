@@ -1,5 +1,5 @@
 import json, datetime
-from app.constants.pathfiles import LIST_DISTRICTS_PATHFILE, LIST_SUBDISTRICTS_PATHFILE, LIST_DATA_PATHFILE
+from application.constants.pathfiles import LIST_DISTRICTS_PATHFILE, LIST_SUBDISTRICTS_PATHFILE, LIST_DATA_PATHFILE
 
 days = ("Senin", "Selasa", "Rabu", "Kamis", "Jum'at", "Sabtu", "Minggu")
 

@@ -4,7 +4,7 @@ https://lahelu.com/api/post/get-posts?feed=1&page=2
 from flask import request
 import requests as xhr
 import json, re
-from app.utilities.response import api_response_error, api_response_success
+from application.utilities.response import api_response_error, api_response_success
 
 CACHE_LAHELU_URL = "https://cache.lahelu.com/"
 SHOW_POST_LAHELU_URL = "https://lahelu.com/post/"

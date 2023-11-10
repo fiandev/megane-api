@@ -1,5 +1,5 @@
-from app.core.DBConnection import DBConnection
-from app.utilities.env import env
+from application.core.DBConnection import DBConnection
+from application.utilities.env import env
 
 class LaheluDB (DBConnection):
     def __init__ (self):

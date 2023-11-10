@@ -1,7 +1,7 @@
 import re
 from flask import request
-from app.utilities.response import api_response_error, api_response_success
-from app.constants.phoneNumberData import GSM_PREFIXES, AREA_CODES
+from application.utilities.response import api_response_error, api_response_success
+from application.constants.phoneNumberData import GSM_PREFIXES, AREA_CODES
 
 class PhoneNumberController:
     @staticmethod

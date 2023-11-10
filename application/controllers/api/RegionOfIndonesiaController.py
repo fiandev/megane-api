@@ -1,7 +1,7 @@
 import json
 from flask import jsonify, request
-from app.utilities.response import api_response_error, api_response_success
-from app.constants.pathfiles import LIST_DISTRICTS_PATHFILE, LIST_DATA_PATHFILE
+from application.utilities.response import api_response_error, api_response_success
+from application.constants.pathfiles import LIST_DISTRICTS_PATHFILE, LIST_DATA_PATHFILE
 
 class RegionOfIndonesiaController:
     @staticmethod
