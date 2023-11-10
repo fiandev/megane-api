@@ -1,8 +1,9 @@
 from flask import Flask
-from app.config import config
+from application.config import config
 
 server = Flask(__name__, template_folder="../resources/views")
 server.secret_key = config["key"]
 server.config['SECRET_KEY'] = config["key"]
 
-from app.routes import api, web
+from application.routes.api import api
+from application.routes.web import web
