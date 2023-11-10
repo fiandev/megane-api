@@ -22,7 +22,7 @@ pip install -r requirements.txt
 
 ## collections
 
-### API meme from ![lahelu](https://lahelu.com)
+### API meme from [lahelu](https://lahelu.com)
 
 - endpoints
 ```shell
