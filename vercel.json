@@ -1,4 +1,4 @@
-{
+{"buildCommand":"pip install -r requirements.txt && flask run",
   "builds": [
     {
       "src": "./app.py",
@@ -12,7 +12,7 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/"
+      "dest": "main.py"
     }
   ]
 }
