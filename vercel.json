@@ -1,5 +1,5 @@
 {
-"buildCommand":"pip install -r requirements.txt && export FLASK_APP=app.py && flask run",
+"buildCommand":"pip install -r requirements.txt && python app.py",
   "builds": [
     {
       "src": "./app.py",
@@ -15,9 +15,5 @@
       "src": "/(.*)",
       "dest": "app.py"
     }
-  ],
-
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/app" }
   ]
 }
