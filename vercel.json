@@ -1,20 +1,19 @@
 {
-"buildCommand":"pip install -r requirements.txt",
+  "buildCommand": "pip install -r requirements.txt && flask run",
   "builds": [
     {
-      "src": "**/*.py",
+      "src": "app.py",
       "use": "@vercel/python"
     },
     {
-      "src": "public/**",
+      "src": "static/**",
       "use": "@vercel/static"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "./app.py"
+      "dest": "app.py"
     }
-  ],
-  "rewrites": [ { "source": "/(.*)", "destination": "/app" } ]
+  ]
 }
