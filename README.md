@@ -1,28 +1,12 @@
-# API Collections
-repository to save the API that i have created using python.
+# React + Vite
 
-## installation
-### clone this repository
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-```shell
-# first you need to clone this repository
-git clone https://github.com/fiandev/api-collections
+Currently, two official plugins are available:
 
-# then enter the repository
-cd api-collections
-
-```
-
-### installing dependencies
-
-```
-# first you need to install dependencies, before run this program
-pip install -r requirements.txt
-```
-
-## collections
-
-### API meme from [lahelu](https://lahelu.com)
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[lahelu](https://lahelu.com)
 
 - endpoints
 ```shell

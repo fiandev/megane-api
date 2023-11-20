@@ -1,0 +1,5 @@
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Poppins&display=swap");

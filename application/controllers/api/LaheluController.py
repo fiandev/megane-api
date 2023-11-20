@@ -70,7 +70,7 @@ class LaheluController:
             for item in items:
                 item["postUrl"] = SHOW_POST_LAHELU_URL + item["postID"]
                 item["media"] = CACHE_LAHELU_URL + item["media"]
-                item["userAvatar"] = CACHE_LAHELU_URL + item["userAvatar"]
+                item["userAvatar"] = item["userAvatar"]
                 item["categories"] = list(map(lambda categoryId: LAHELU_MEME_CATEGORIES[str(categoryId)], item["categories"]))
                 
                 del item["searchVector"]
@@ -81,7 +81,7 @@ class LaheluController:
             
             return api_response_success(results, otherStateData=otherStateData)
         except Exception as err:
-            raise err
+            return api_response_error(str(err))
             
     @staticmethod
     def downloader():
@@ -111,4 +111,4 @@ class LaheluController:
             
             return api_response_success(results, otherStateData=otherStateData)
         except Exception as err:
-            raise err
+            return api_response_error(str(err))
