@@ -5,7 +5,7 @@ from application.controllers.api.RegionOfIndonesiaController import RegionOfIndo
 from application.controllers.api.PhoneNumberController import PhoneNumberController
 from application.controllers.api.LaheluController import LaheluController
 
-app = Flask(__name__, template_folder="../resources/views")
+app = Flask(__name__, template_folder="./application/resources/views")
 app.secret_key = config["key"]
 app.config['SECRET_KEY'] = config["key"]
 
