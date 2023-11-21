@@ -1,5 +1,6 @@
 npm run build
-cp ./dist/*.html ./application/resources/views/ -r
+rm -rf ./static/
+mkdir ./static
 cp ./dist/* ./static/ -r
 
 echo "done ..."
