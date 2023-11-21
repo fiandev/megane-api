@@ -6,7 +6,7 @@
       "use": "@vercel/python"
     },
     {
-      "src": "static/**",
+      "src": "./static",
       "use": "@vercel/static"
     }
   ],
