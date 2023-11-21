@@ -1,7 +1,8 @@
 import { lazy } from "react";
 import { Link } from "react-router-dom";
+import Statistic from "../atoms/Statistic";
 
-const Statistic = lazy(() => import("../atoms/Statistic"));
+// const Statistic = lazy(() => import("../atoms/Statistic"));
 
 export default function ApiList({ name, path, icon }) {
   return (
