@@ -18,8 +18,9 @@
   ],
   "redirects": [
     {
-      "src": "/docs/<filename>.md",
-      "dest": "/static/docs/$filename.md"
+      "source": "/docs/<filename>.md",
+      "destination": "/static/docs/$filename.md",
+      "permanent": true
     }
   ]
 }
