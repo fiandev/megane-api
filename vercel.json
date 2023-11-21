@@ -14,7 +14,9 @@
     {
       "src": "/(.*)",
       "dest": "app.py"
-    },
+    }
+  ],
+  "redirects": [
     {
       "src": "/docs/<filename>.md",
       "dest": "/static/docs/$filename.md"
