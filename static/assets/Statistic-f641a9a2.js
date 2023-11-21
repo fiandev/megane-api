@@ -1,0 +1,1 @@
+import{j as s}from"../index.js";import{a as r}from"./index.esm-94f8d121.js";function n({icon:t,value:a}){let e=r[t];return s.jsxs("div",{className:"flex items-center gap-0.5",children:[s.jsx(e,{className:"w-4 h-4 text-primary"}),s.jsx("span",{className:"font-semibold",children:a})]})}export{n as default};
