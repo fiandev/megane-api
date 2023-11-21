@@ -1,6 +1,7 @@
 npm run build
 rm -rf ./static/
 mkdir ./static
+cp ./public/* ./static/ -r
 cp ./dist/* ./static/ -r
 
 echo "done ..."

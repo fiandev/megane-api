@@ -14,6 +14,10 @@
     {
       "src": "/(.*)",
       "dest": "app.py"
+    },
+    {
+      "src": "/docs/<filename>.md",
+      "dest": "/static/docs/$filename.md"
     }
   ]
 }
