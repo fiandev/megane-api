@@ -1,0 +1,5 @@
+npm run build
+cp ./dist/*.html ./application/resources/views/ -r
+cp ./dist/* ./static/ -r
+
+echo "done ..."
