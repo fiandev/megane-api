@@ -2,6 +2,7 @@ npm run build
 rm -rf ./static/
 git add .
 git commit -m "[build]: update react build"
+git push origin master
 mkdir ./static
 cp ./public/* ./static/ -r
 cp ./dist/* ./static/ -r
