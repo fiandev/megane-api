@@ -30,9 +30,7 @@ export default function ApiList({ item }) {
       </div>
 
       <div className="flex flex-col items-start justify-end text-start">
-        <p className="text-sm">
-          {item.description}
-        </p>
+        <p className="text-sm">{item.description}</p>
       </div>
     </Link>
   );

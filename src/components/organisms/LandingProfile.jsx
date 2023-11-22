@@ -13,7 +13,7 @@ export default function LandingProfile() {
       </h2>
 
       <div className="flex items-center gap-2">
-        <GetStartedButton href="#" className="bg-primary font-semibold">
+        <GetStartedButton href="/docs" className="bg-primary font-semibold">
           Getting Started
         </GetStartedButton>
         <GetStartedButton

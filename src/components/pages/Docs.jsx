@@ -18,7 +18,9 @@ export default function Docs() {
       </div>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-2">
-        {lists.map((api) => <ApiList item={api} />)}
+        {lists.map((api) => (
+          <ApiList item={api} />
+        ))}
       </div>
     </div>
   );

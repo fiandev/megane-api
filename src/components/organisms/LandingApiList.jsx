@@ -17,11 +17,7 @@ export default function LandingApiList() {
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-2 lg:gap-4 place-content-center">
         {lists
           ? lists.map((api) => {
-              return (
-                <ApiList
-                  item={api}
-                />
-              );
+              return <ApiList item={api} />;
             })
           : null}
       </div>

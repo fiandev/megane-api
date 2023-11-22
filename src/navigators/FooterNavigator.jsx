@@ -2,11 +2,7 @@ const FooterNavigator = {
   routes: [
     {
       name: "terms & conditions",
-      path: "/terms-conditions",
-    },
-    {
-      name: "FAQ",
-      path: "/faq",
+      path: "https://megane-api.fiandev.my.id/terms-conditions/",
     },
   ],
 };

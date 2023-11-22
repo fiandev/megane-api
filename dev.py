@@ -18,6 +18,10 @@ def Home ():
     return render_template("index.html")
 
 
+@app.route("/terms-and-conditions")
+def Term_and_Conditions ():
+    return render_template("terms-and-conditions.html")
+
 # api routes
 @app.route('/api/cek-nik')
 @app.route('/api/check-nik')
