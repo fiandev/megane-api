@@ -15,12 +15,5 @@
       "src": "/(.*)",
       "dest": "app.py"
     }
-  ],
-  "redirects": [
-    {
-      "source": "/docs/<filename>.md",
-      "destination": "/static/docs/$filename.md",
-      "permanent": true
-    }
   ]
 }

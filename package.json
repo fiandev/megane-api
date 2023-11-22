@@ -2,7 +2,7 @@
   "name": "megane",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -11,6 +11,7 @@
     "prettier": "prettier ./src/**/*.{js,ts,jsx,tsx,css} -w"
   },
   "dependencies": {
+    "fast-glob": "^3.3.2",
     "gsap": "^3.12.2",
     "markdown-to-jsx": "^7.3.2",
     "react": "^18.2.0",

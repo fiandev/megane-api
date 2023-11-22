@@ -5,7 +5,9 @@ export default function APIDOCS({ path }) {
   const [MarkdownContent, SetMarkdownContent] = useState("");
 
   useEffect(() => {
-    fetch(`${path}.md`)
+    fetch(
+      `https://raw.githubusercontent.com/fiandev/megane-api/master/static/docs/${path}.md`,
+    )
       .then((res) => res.text())
       .then((content) => SetMarkdownContent(content))
       .catch((err) => console.log);
