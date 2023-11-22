@@ -19,9 +19,7 @@ export default function LandingApiList() {
           ? lists.map((api) => {
               return (
                 <ApiList
-                  path={api.path}
-                  name={api.name}
-                  icon={api.icon}
+                  item={api}
                   text="10"
                 />
               );
