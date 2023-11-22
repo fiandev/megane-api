@@ -20,7 +20,6 @@ export default function LandingApiList() {
               return (
                 <ApiList
                   item={api}
-                  text="10"
                 />
               );
             })
