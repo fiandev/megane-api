@@ -6,7 +6,7 @@ export default function APIDOCS({ path }) {
 
   useEffect(() => {
     fetch(
-      `https://raw.githubusercontent.com/fiandev/megane-api/master/static/docs/${path}.md`,
+      `https://raw.githubusercontent.com/fiandev/megane-api/master/static/${path[0] === "/" ? path.slice(1) : path}.md`,
     )
       .then((res) => res.text())
       .then((content) => SetMarkdownContent(content))
