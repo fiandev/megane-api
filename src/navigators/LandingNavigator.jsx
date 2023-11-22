@@ -8,10 +8,6 @@ const LandingNavigator = {
       name: "docs",
       path: "/docs",
     },
-    {
-      name: "contact",
-      path: "/contact",
-    },
   ],
 };
 

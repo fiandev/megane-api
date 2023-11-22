@@ -45,7 +45,7 @@ export default function Navigation() {
             navOpen ? "border-b border-primary" : ""
           } `}
         >
-          <Logo href="#" name="megane API" src="/megane.png" />
+          <Logo href="/" name="megane API" src="/megane.png" />
           <ButtonMenu navOpen={navOpen} handler={navHandler} />
         </div>
         <div
