@@ -1,8 +1,10 @@
 # region of Indonesia API
+API that can be used to search for detailed information from a region of Indonesia.
 
+## search province by query
 
-### search province by query
-- endpoints
+### example
+
 ```
 /api/province?search=<query>
 ```
@@ -25,9 +27,9 @@
 }
 ```
 
-### search district by query
+## search district by query
 
-- endpoints
+### example
 ```
 /api/district?search=<query>
 ```
@@ -50,5 +52,3 @@
   "status": "string"
 }
 ```
-
-> built with ♥️ by fiandev

@@ -9,9 +9,7 @@ export default function FeatureList({ feature }) {
         </div>
       </div>
       <div className="flex flex-col items-start justify-end text-start">
-        <h1 className="text-light text-lg capitalize font-semibold">
-          
-        </h1>
+        <h1 className="text-light text-lg capitalize font-semibold"></h1>
         <p className="text-light text-sm">
           Selamat datang di papan klip Gboard, teks apa pun yang Anda salin akan
           disimpan di sini.

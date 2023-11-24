@@ -66,6 +66,29 @@ def lahelu_downloader ():
 def short_link ():
     return ShortLinkController.generate()
 
+@app.route("/api/quran/surah/all")
+@app.route("/api/al-quran/surah/all")
+def list_surah ():
+    return QuranController.list_surah()
+
+@app.route("/api/quran/surah/<surah_id>")
+@app.route("/api/al-quran/surah/<surah_id>")
+def show_surah (surah_id):
+    return QuranController.show_surah(surah_id)
+
+@app.route("/api/quran/juz/<juz_id>")
+@app.route("/api/al-quran/juz/<juz_id>")
+def show_juz (juz_id):
+    return QuranController.show_juz(juz_id)
+
+@app.route("/api/quran/jelajahi")
+@app.route("/api/quran/discovery")
+@app.route("/api/al-quran/jelajahi")
+@app.route("/api/al-quran/dicovery")
+def search_quran ():
+    return QuranController.search_quran()
+
+
 
 if __name__ == "__main__":
     app.run(debug=False)

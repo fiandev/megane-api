@@ -1,7 +1,10 @@
 # NIK parsing API
+An API based on the NIK format and parses any available data.
 
-## parsing NIK (personal ID of Indonesian)
+## parsing NIK
+NIK is a personal ID of Indonesian can be see on the family card document.
 
+### example
 ```
 /api/check-nik?nik=<NIK>
 ```

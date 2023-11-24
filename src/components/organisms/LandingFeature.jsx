@@ -16,7 +16,6 @@ export default function LandingFeature() {
       </div>
 
       <div className="w-full grid md:grid-cols-2 lg:grid-cols-2 gap-2 lg:gap-4">
-        
         <div className="flex items-center justify-center gap-2 h-40 p-2 overflow-auto bg-secondary rounded-md shadow-md">
           <div className="flex items-center justify-center w-1/4 h-full">
             <div className="flex items-center justify-center w-full h-full text-xl rounded-lg text-light">
@@ -28,11 +27,12 @@ export default function LandingFeature() {
               fast and efficient performance
             </h1>
             <p className="text-light text-sm">
-              The available API is built using the Python programming language so there is no need to doubt its speed and efficiency.
+              The available API is built using the Python programming language
+              so there is no need to doubt its speed and efficiency.
             </p>
           </div>
         </div>
-        
+
         <div className="flex items-center justify-center gap-2 h-40 p-2 overflow-auto bg-secondary rounded-md shadow-md">
           <div className="flex items-center justify-center w-1/4 h-full">
             <div className="flex items-center justify-center w-full h-full text-xl rounded-lg text-light">
@@ -48,7 +48,7 @@ export default function LandingFeature() {
             </p>
           </div>
         </div>
-        
+
         <div className="flex items-center justify-center gap-2 h-40 p-2 overflow-auto bg-secondary rounded-md shadow-md">
           <div className="flex items-center justify-center w-1/4 h-full">
             <div className="flex items-center justify-center w-full h-full text-xl rounded-lg text-light">
@@ -64,7 +64,7 @@ export default function LandingFeature() {
             </p>
           </div>
         </div>
-        
+
         <div className="flex items-center justify-center gap-2 h-40 p-2 overflow-auto bg-secondary rounded-md shadow-md">
           <div className="flex items-center justify-center w-1/4 h-full">
             <div className="flex items-center justify-center w-full h-full text-xl rounded-lg text-light">
@@ -72,15 +72,15 @@ export default function LandingFeature() {
             </div>
           </div>
           <div className="w-3/4 flex flex-col items-start justify-end text-start">
-            <h1 className="text-light text-lg capitalize font-semibold">documentation
-              supports integration with bots
+            <h1 className="text-light text-lg capitalize font-semibold">
+              documentation supports integration with bots
             </h1>
             <p className="text-light text-sm">
-              Our API really supports integration with bots because it uses the Json file format
+              Our API really supports integration with bots because it uses the
+              Json file format
             </p>
           </div>
         </div>
-        
       </div>
     </div>
   );

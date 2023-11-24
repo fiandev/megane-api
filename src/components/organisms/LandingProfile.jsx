@@ -16,16 +16,14 @@ export default function LandingProfile() {
         <GetStartedButton href="/docs" className="bg-primary font-semibold">
           Getting Started
         </GetStartedButton>
-        {
-          /*
+        {/*
         <GetStartedButton
           href="https://github.com/fiandev/megane-api"
           className="text-dark dark:text-light font-semibold"
         >
           see repository
         </GetStartedButton>
-          */
-        }
+          */}
       </div>
     </div>
   );

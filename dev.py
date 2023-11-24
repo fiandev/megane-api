@@ -5,6 +5,7 @@ from application.controllers.api.RegionOfIndonesiaController import RegionOfIndo
 from application.controllers.api.PhoneNumberController import PhoneNumberController
 from application.controllers.api.LaheluController import LaheluController
 from application.controllers.api.ShortLinkController import ShortLinkController
+from application.controllers.api.QuranController import QuranController
 
 app = Flask(__name__, template_folder="./application/resources/views")
 app.secret_key = config["key"]
@@ -66,6 +67,31 @@ def lahelu_downloader ():
 @app.route("/api/short-link")
 def short_link ():
     return ShortLinkController.generate()
+
+@app.route("/api/quran/surah/all")
+@app.route("/api/al-quran/surah/all")
+def list_surah ():
+    return QuranController.list_surah()
+
+@app.route("/api/quran/surah/<surah_id>")
+@app.route("/api/al-quran/surah/<surah_id>")
+def show_surah (surah_id):
+    return QuranController.show_surah(surah_id)
+
+@app.route("/api/quran/juz/<juz_id>")
+@app.route("/api/al-quran/juz/<juz_id>")
+def show_juz (juz_id):
+    return QuranController.show_juz(juz_id)
+
+@app.route("/api/quran/jelajahi")
+@app.route("/api/quran/discovery")
+@app.route("/api/al-quran/jelajahi")
+@app.route("/api/al-quran/dicovery")
+def search_quran ():
+    return QuranController.search_quran()
+
+
+
 
 
 if __name__ == "__main__":

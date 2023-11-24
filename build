@@ -1,4 +1,12 @@
+#!/data/data/com.termux/files/usr/bin/bash
+
+DATA_DIRECTORY="data"
+
 npm run build
+if [ ! -d $DATA_DIRECTORY ]; then
+  mv "../$DATA_DIRECTORY" "./$DATA_DIRECTORY"
+fi
+
 rm -rf ./static/
 git add .
 git commit -m "[build]: update react build"
@@ -7,4 +15,7 @@ mkdir ./static
 cp ./public/* ./static/ -r
 cp ./dist/* ./static/ -r
 
+mv "../$DATA_DIRECTORY" "./$DATA_DIRECTORY"
+
+echo "./data => ../data"
 echo "done ..."

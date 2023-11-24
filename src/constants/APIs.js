@@ -26,4 +26,11 @@ export const lists = [
     description:
       "API that can help in creating new shortlinks without needing to visit the relevant shortlink website.",
   },
-];
+  {
+    name: "Alqur'an API",
+    icon: "https://my-quran.fiandev.my.id/graph.jpg",
+    path: "/docs/quran",
+    description:
+      "API that provides Al-Quran data complete with translation and interpretation",
+  },
+].sort((a, b) => (a.name.toLowerCase() > b.name.toLowerCase() ? 1 : -1));
