@@ -4,7 +4,7 @@ import BreadCrumbs from "../molecules/BreadCrumbs";
 
 export default function APIDOCS({ path }) {
   const [MarkdownContent, SetMarkdownContent] = useState("");
-  const ENV = "dev";
+  const ENV = "prod";
 
   useEffect(() => {
     fetch(
