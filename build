@@ -3,8 +3,9 @@
 DATA_DIRECTORY="data"
 
 npm run build
-if [ ! -d $DATA_DIRECTORY ]; then
+if [ ! -d "./$DATA_DIRECTORY" ]; then
   mv "../$DATA_DIRECTORY" "./$DATA_DIRECTORY"
+  echo "./data => ../data"
 fi
 
 rm -rf ./static/
@@ -17,5 +18,4 @@ cp ./dist/* ./static/ -r
 
 mv "../$DATA_DIRECTORY" "./$DATA_DIRECTORY"
 
-echo "./data => ../data"
 echo "done ..."
