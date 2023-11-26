@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getBlobRadius } from "../../utils/generator";
+import { getBlobRadius, randomInt } from "../../utils/generator";
 
 const Shape = ({ className, children }) => {
   const [time, setTime] = useState(Date.now());
@@ -10,10 +10,12 @@ const Shape = ({ className, children }) => {
       clearInterval(interval);
     };
   }, [time]);
-
-  let border = getBlobRadius();
+  
   let style = {
-    borderRadius: border,
+    borderRadius: getBlobRadius(),
+    transform: {
+      scale: `${ randomInt(0, 1)}, ${ randomInt(1, 9) }`
+    }
   };
 
   return (

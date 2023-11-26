@@ -5,11 +5,15 @@ from application.controllers.api.RegionOfIndonesiaController import RegionOfIndo
 from application.controllers.api.PhoneNumberController import PhoneNumberController
 from application.controllers.api.LaheluController import LaheluController
 from application.controllers.api.ShortLinkController import ShortLinkController
+from application.controllers.api.QuranController import QuranController
+from application.controllers.api.SocialMediaController import SocialMediaController
 
 app = Flask(__name__, template_folder="./application/resources/views")
 app.secret_key = config["key"]
 app.config['SECRET_KEY'] = config["key"]
 
+# disable strict trailing slash
+app.url_map.strict_slashes = False
 
 # web routes
 
@@ -87,6 +91,32 @@ def show_juz (juz_id):
 @app.route("/api/al-quran/dicovery")
 def search_quran ():
     return QuranController.search_quran()
+
+@app.route("/api/ig/downloader")
+@app.route("/api/instagram/downloader")
+def ig_downloader ():
+    return SocialMediaController.ig_downloader()
+
+@app.route("/api/tiktok/downloader")
+def tiktok_downloader ():
+    return SocialMediaController.tiktok_downloader()
+
+@app.route("/api/tiktokslide/downloader")
+@app.route("/api/tiktok/images")
+@app.route("/api/tiktok/slides")
+def tiktok_slide_downloader ():
+    return SocialMediaController.tiktok_slide_downloader()
+
+@app.route("/api/tiktok/random")
+@app.route("/api/tiktok/random-post")
+def tiktok_random_user_post ():
+    return SocialMediaController.tiktok_random_user_post()
+
+@app.route("/api/tiktok/statistic")
+@app.route("/api/tiktok/statistics")
+@app.route("/api/tiktok/stats")
+def tiktok_statistic ():
+    return SocialMediaController.tiktok_statistic()
 
 
 
