@@ -10,12 +10,12 @@ const Shape = ({ className, children }) => {
       clearInterval(interval);
     };
   }, [time]);
-  
+
   let style = {
     borderRadius: getBlobRadius(),
     transform: {
-      scale: `${ randomInt(0, 1)}, ${ randomInt(1, 9) }`
-    }
+      scale: `${randomInt(0, 1)}, ${randomInt(1, 9)}`,
+    },
   };
 
   return (
