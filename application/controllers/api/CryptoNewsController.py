@@ -1,5 +1,4 @@
 from application.utilities.response import api_response_error, api_response_success
-from application.utilities.cache import cache
 from application.models.CryptoNews import CryptoNews
 
 class CryptoNewsController:
@@ -9,4 +8,4 @@ class CryptoNewsController:
             data = CryptoNews.get_latest()
             return api_response_success(data)
         except Exception as e:
-            return api_response_error(e, 500)
+            return api_response_error(str(e), 500)

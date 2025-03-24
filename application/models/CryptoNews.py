@@ -28,7 +28,6 @@ class CryptoNews:
                         "link": link,
                         "article": _self.get_news_by_url(link)
                     })
-                print (results)
                 return json.loads(cache (f"cryptonews.get_latest", json.dumps(results), 60))
             else:
                 print(f"Failed to retrieve page, status code: {response.status_code}")
@@ -53,13 +52,13 @@ class CryptoNews:
                     "headline": soup.select_one(".post-detail__title").get_text(strip=True),
                     "published_at": soup.select(".post-detail__date")[0].get_text(strip=True),
                     "author": {
-                        "avatar": soup.select(".author-list__image")[0].get("src"),
+                        "avatar": soup.select(".author-list__image img")[0].get("src") or None,
                         "profile_url": soup.select(".author-list__link")[0].get("href"),
                         "name": soup.select(".author-list__name")[0].get_text(strip=True)
                     },
                     "editor": {
-                        "avatar": soup.select(".author-list__image")[1].get("src") or None,
-                        "profile_url": soup.select(".author-list__link")[1].get("href") or None,
+                        "avatar": soup.select(".author-list__image img")[1].get("src") or None,
+                        "profile_url": soup.select(".author-list__link img")[1].get("href") or None,
                         "name": soup.select(".author-list__name")[1].get_text(strip=True) or None
                     },
                     "content": content
