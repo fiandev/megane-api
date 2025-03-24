@@ -34,7 +34,7 @@ class CryptoNews:
                 print(f"Failed to retrieve page, status code: {response.status_code}")
                 return []
         except Exception as e:
-            return []
+            raise e
     
     @staticmethod
     def get_news_by_url (url):
@@ -68,4 +68,4 @@ class CryptoNews:
                 print(f"Failed to retrieve page, status code: {response.status_code}")
                 return []
         except Exception as e:
-            return []
+            raise e
