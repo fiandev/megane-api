@@ -58,7 +58,7 @@ class CryptoNews:
                     },
                     "editor": {
                         "avatar": soup.select(".author-list__image img")[1].get("src") or None,
-                        "profile_url": soup.select(".author-list__link img")[1].get("href") or None,
+                        "profile_url": soup.select(".author-list__link")[1].get("href") or None,
                         "name": soup.select(".author-list__name")[1].get_text(strip=True) or None
                     },
                     "content": content
