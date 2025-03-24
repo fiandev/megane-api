@@ -1,16 +1,21 @@
-from flask import jsonify
 from application.core.server import server
 from application.controllers.api.PopulationDataController import PopulationDataController
 from application.controllers.api.RegionOfIndonesiaController import RegionOfIndonesiaController
 from application.controllers.api.PhoneNumberController import PhoneNumberController
 from application.controllers.api.LaheluController import LaheluController
+from application.controllers.api.CryptoNewsController import CryptoNewsController
 
-@server.route('/api/test')
-def Test ():
-    return jsonify({
-      "status": 200,
-      "message": "ok"
-    })
+# from application.utilities.cache import cache
+# import json
+# from application.utilities.response import api_response_error, api_response_success
+
+# @server.route('/api/test')
+# def Test ():
+#     data = {
+#         "username": "fiandev",
+#         "hobbies": ["code", "anime", "music"]
+#     }
+#     return api_response_success(json.loads(cache("test", json.dumps(data), 10)))
 
 @server.route('/api/cek-nik')
 @server.route('/api/check-nik')
@@ -50,3 +55,7 @@ def lahelu_all ():
 @server.route("/api/lahelu/downloader")
 def lahelu_downloader ():
     return LaheluController.downloader()
+
+@server.route("/api/cryptonews/latest")
+def cryptonews_latest ():
+    return CryptoNewsController.get_latest()

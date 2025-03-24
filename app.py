@@ -7,6 +7,7 @@ from application.controllers.api.LaheluController import LaheluController
 from application.controllers.api.ShortLinkController import ShortLinkController
 from application.controllers.api.QuranController import QuranController
 from application.controllers.api.SocialMediaController import SocialMediaController
+from application.controllers.api.CryptoNewsController import CryptoNewsController
 
 app = Flask(__name__, template_folder="./application/resources/views")
 app.secret_key = config["key"]
@@ -118,7 +119,9 @@ def tiktok_random_user_post ():
 def tiktok_statistic ():
     return SocialMediaController.tiktok_statistic()
 
-
+@server.route("/api/cryptonews/latest")
+def cryptonews_latest ():
+    return CryptoNewsController.get_latest()
 
 if __name__ == "__main__":
     app.run(debug=False)
