@@ -124,4 +124,4 @@ def cryptonews_latest ():
     return CryptoNewsController.get_latest()
 
 if __name__ == "__main__":
-    app.run(debug=False)
+    app.run(debug=True)

@@ -8,4 +8,5 @@ class CryptoNewsController:
             data = CryptoNews.get_latest()
             return api_response_success(data)
         except Exception as e:
+            raise e
             return api_response_error(str(e), 500)

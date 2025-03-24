@@ -50,7 +50,7 @@ class CryptoNews:
                 
                 return {
                     "headline": soup.select_one(".post-detail__title").get_text(strip=True),
-                    "published_at": soup.select(".post-detail__date")[0].get_text(strip=True),
+                    "published_at": soup.select_one(".post-detail__date").get_text(strip=True),
                     "author": {
                         "avatar": soup.select(".author-list__image img")[0].get("src") or None,
                         "profile_url": soup.select(".author-list__link")[0].get("href"),
