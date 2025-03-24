@@ -52,14 +52,14 @@ class CryptoNews:
                     "headline": soup.select_one(".post-detail__title").get_text(strip=True),
                     "published_at": soup.select_one(".post-detail__date").get_text(strip=True),
                     "author": {
-                        "avatar": soup.select(".author-list__image img")[0].get("src") or None,
-                        "profile_url": soup.select(".author-list__link")[0].get("href"),
-                        "name": soup.select(".author-list__name")[0].get_text(strip=True)
+                        "avatar": soup.select_one(".author-list__image img")["src"] if soup.select(".author-list__image img") else None,
+                        "profile_url": soup.select_one(".author-list__link")["href"] if soup.select(".author-list__link") else None,
+                        "name": soup.select_one(".author-list__name").get_text(strip=True) if soup.select(".author-list__name") else None
                     },
                     "editor": {
-                        "avatar": soup.select(".author-list__image img")[1].get("src") or None,
-                        "profile_url": soup.select(".author-list__link")[1].get("href") or None,
-                        "name": soup.select(".author-list__name")[1].get_text(strip=True) or None
+                        "avatar": soup.select(".author-list__image img")[1]["src"] if len(soup.select(".author-list__image img")) > 1 else None,
+                        "profile_url": soup.select(".author-list__link")[1]["href"] if len(soup.select(".author-list__link")) > 1 else None,
+                        "name": soup.select(".author-list__name")[1].get_text(strip=True) if len(soup.select(".author-list__name")) > 1 else None
                     },
                     "content": content
                 }
