@@ -119,7 +119,7 @@ def tiktok_random_user_post ():
 def tiktok_statistic ():
     return SocialMediaController.tiktok_statistic()
 
-@server.route("/api/cryptonews/latest")
+@app.route("/api/cryptonews/latest")
 def cryptonews_latest ():
     return CryptoNewsController.get_latest()
 
